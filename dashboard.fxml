@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="450" prefWidth="693.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/20.0.1" fx:controller="car.rental.managment.system.DashboardController">
+
+    <children>
+        <Label layoutX="250" layoutY="20" style="-fx-font-size: 20px; -fx-font-weight: bold;" text="Car Rental Dashboard" />
+
+        <TableView fx:id="carTable" layoutX="50" layoutY="60" prefHeight="320" prefWidth="586.0">
+
+            <columns>
+                <TableColumn fx:id="carNameCol" prefWidth="220" text="Car Name" />
+                <TableColumn fx:id="priceCol" prefWidth="120" text="Price per Day (৳)" />
+                <TableColumn fx:id="daysCol" prefWidth="100" text="Days" />
+                <TableColumn fx:id="totalCol" prefWidth="150" text="Total Price (৳)" />
+            </columns>
+
+        </TableView>
+
+        <Button fx:id="submitBtn" layoutX="300" layoutY="390" onAction="#handleSubmit" prefWidth="120" text="Submit Rental" />
+        
+        <Label fx:id="statusLabel" layoutX="50" layoutY="420" prefWidth="600" textFill="green" />
+    </children>
+</AnchorPane>
