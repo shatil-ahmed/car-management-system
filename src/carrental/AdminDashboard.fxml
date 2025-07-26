@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="700" prefWidth="900" style="-fx-background-color: linear-gradient(to bottom, #2c3e50, #3498db);" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/20.0.1" fx:controller="carrental.AdminDashboardController">
+
+    <VBox prefHeight="472.0" prefWidth="840.0" spacing="20" AnchorPane.leftAnchor="30" AnchorPane.rightAnchor="30" AnchorPane.topAnchor="30">
+
+        <Label style="-fx-font-size: 36px; -fx-text-fill: white;" text="Admin Dashboard" />
+
+        <Label fx:id="welcomeLabel" style="-fx-font-size: 18px; -fx-text-fill: white;" text="Welcome, Admin!" />
+
+        <Button fx:id="manageCarsBtn" onAction="#handleManageCars" prefWidth="200" style="-fx-font-size: 16px;" text="Manage Cars" />
+
+        <Button fx:id="manageCustomersBtn" onAction="#handleManageCustomers" prefWidth="200" style="-fx-font-size: 16px;" text="Manage Customers" />
+
+        <Button fx:id="rentalHistoryBtn" onAction="#handleRentalHistory" prefWidth="200" style="-fx-font-size: 16px;" text="Rental History" />
+
+        <!-- ✅ New Button to Assign Car -->
+        <Button fx:id="assignCarBtn" onAction="#handleAssignCar" prefWidth="200" style="-fx-font-size: 16px;" text="Assign Car to Customer" />
+
+        <Button fx:id="logoutBtn" onAction="#handleLogout" prefWidth="200" style="-fx-font-size: 16px; -fx-background-color: #e74c3c; -fx-text-fill: white;" text="Logout" />
+      <Button fx:id="buttonBack" mnemonicParsing="false" onAction="#back" text="Back" />
+
+    </VBox>
+</AnchorPane>

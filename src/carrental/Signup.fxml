@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="carrental.SignupController"
+            prefWidth="900.0" prefHeight="700.0"
+            style="-fx-background-color: linear-gradient(to bottom, #0a3d62, #145A32);">
+
+    <children>
+        <!-- Window Controls -->
+        <HBox spacing="10" alignment="TOP_RIGHT" AnchorPane.topAnchor="10" AnchorPane.rightAnchor="10">
+            <children>
+                <Button text="–" onAction="#handleMinimize"
+                        style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 16px;" />
+                <Button text="X" onAction="#handleClose"
+                        style="-fx-background-color: transparent; -fx-text-fill: red; -fx-font-size: 16px;" />
+            </children>
+        </HBox>
+
+        <!-- Title -->
+        <Label text="Create New Account"
+               layoutX="310" layoutY="60"
+               style="-fx-font-size: 30px; -fx-text-fill: white; -fx-font-weight: bold;" />
+
+        <!-- Form Fields -->
+        <GridPane layoutX="220" layoutY="130" hgap="20" vgap="20">
+            <columnConstraints>
+                <ColumnConstraints halignment="RIGHT"/>
+                <ColumnConstraints/>
+            </columnConstraints>
+
+            <children>
+                <Label text="First Name:" style="-fx-text-fill: white;" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                <TextField fx:id="firstNameField" GridPane.rowIndex="0" GridPane.columnIndex="1"
+                           style="-fx-background-color: transparent; -fx-border-color: white; -fx-text-fill: white;" />
+
+                <Label text="Last Name:" style="-fx-text-fill: white;" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                <TextField fx:id="lastNameField" GridPane.rowIndex="1" GridPane.columnIndex="1"
+                           style="-fx-background-color: transparent; -fx-border-color: white; -fx-text-fill: white;" />
+
+                <Label text="Phone:" style="-fx-text-fill: white;" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                <TextField fx:id="phoneField" GridPane.rowIndex="2" GridPane.columnIndex="1"
+                           style="-fx-background-color: transparent; -fx-border-color: white; -fx-text-fill: white;" />
+
+                <Label text="Email:" style="-fx-text-fill: white;" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+                <TextField fx:id="emailField" GridPane.rowIndex="3" GridPane.columnIndex="1"
+                           style="-fx-background-color: transparent; -fx-border-color: white; -fx-text-fill: white;" />
+
+                <Label text="Address:" style="-fx-text-fill: white;" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+                <TextField fx:id="addressField" GridPane.rowIndex="4" GridPane.columnIndex="1"
+                           style="-fx-background-color: transparent; -fx-border-color: white; -fx-text-fill: white;" />
+
+                <Label text="Driving Licence:" style="-fx-text-fill: white;" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+                <TextField fx:id="licenceField" GridPane.rowIndex="5" GridPane.columnIndex="1"
+                           style="-fx-background-color: transparent; -fx-border-color: white; -fx-text-fill: white;" />
+
+                <Label text="Password:" style="-fx-text-fill: white;" GridPane.rowIndex="6" GridPane.columnIndex="0"/>
+                <PasswordField fx:id="passwordField" GridPane.rowIndex="6" GridPane.columnIndex="1"
+                               style="-fx-background-color: transparent; -fx-border-color: white; -fx-text-fill: white;" />
+
+                <Label text="Confirm Password:" style="-fx-text-fill: white;" GridPane.rowIndex="7" GridPane.columnIndex="0"/>
+                <PasswordField fx:id="confirmPasswordField" GridPane.rowIndex="7" GridPane.columnIndex="1"
+                               style="-fx-background-color: transparent; -fx-border-color: white; -fx-text-fill: white;" />
+            </children>
+        </GridPane>
+
+        <!-- Sign Up Button -->
+        <Button text="Sign Up" layoutX="380" layoutY="620" onAction="#handleSignup"
+                style="-fx-background-color: darkgreen; -fx-text-fill: white; -fx-font-size: 16px;" />
+
+        <!-- Login Footer -->
+        <HBox layoutX="350" layoutY="660" spacing="10">
+            <children>
+                <Label text="Already have an account?" style="-fx-text-fill: white;" />
+                <Button text="Login" onAction="#goToLogin"
+                        style="-fx-background-color: transparent; -fx-underline: true; -fx-text-fill: lightblue;" />
+            </children>
+        </HBox>
+    </children>
+</AnchorPane>
